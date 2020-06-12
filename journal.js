@@ -17,30 +17,19 @@ let continueProgram = '';
 while (continueProgram === '') {
 
     let journalTypes = prompt('Welcome to my Onja journal\n Choose(1) for listing all the entries \n Choose(2) for adding a new entry \n Choose(3) to quite');
-    while (journalTypes !== '1' && journalTypes !== '2' && journalTypes !== '3') {
-        journalTypes = prompt('Welcome to my Onja journal\n Choose(1) for listing all the entries \n Choose(2) for adding a new entry \n Choose(3) to quite');
-    }
     if (journalTypes === '1') {
-        for (let i = 0; i < journalTypes; i++) {
-        alert(`${Journallist.Title.title1} \n ${Journallist.Content.content1}`);
-        alert(`${Journallist.Title.title2} \n ${Journallist.Content.content2}`);
-        alert(`${Journallist.Title.title3} \n ${Journallist.Content.content3}`);
-        }
+        alert(`Title: ${Journallist.Title.title1} \n Content: ${Journallist.Content.content1}`);
+        alert(`Title: ${Journallist.Title.title2} \n Content: ${Journallist.Content.content2}`);
+        alert(`Title: ${Journallist.Title.title3} \n Content: ${Journallist.Content.content3}`);
     } else if (journalTypes === '2') {
-      var  newJournal = prompt('Enter your journal title');
-      var  newJournal = prompt('Enter your journal content');  
-        while (newJournal !== 'title' && newJournal !== 'content') {
-            if (newJournal === 'title') {
-                for (let i = 0; i < newJournal; i++) {
-                newJournal = prompt('Enter your journal title'); 
-                }
-            } else if (newJournal === 'content') {
-                for (let i = 0; i < newJournal; i++) {
-                    newJournal = prompt('Enter your journal content'); 
-                }
-            }
+        var  newJournal = prompt('Enter your journal title');
+        var  newJournal = prompt('Enter your journal content');  
+        if (newJournal === 'title') {
+            newJournal = prompt('Enter your journal title'); 
+        } else if (newJournal === 'content') {
+            newJournal = prompt('Enter your journal content'); 
         }
-    } else {
-        continueProgram = "";  
+         
     }
-} 
+        continueProgram = '';
+}
